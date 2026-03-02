@@ -4,29 +4,26 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Create Scanner object to take input
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        // Ask user to enter a string
+        System.out.println("=== Palindrome Checker App (UC3) ===");
         System.out.print("Enter a string: ");
-        String original = sc.nextLine();
+        String original = scanner.nextLine();
 
-        // Variable to store reversed string
         String reversed = "";
 
-        // Reverse the string using for loop
+        // Reverse string using for loop
         for (int i = original.length() - 1; i >= 0; i--) {
-            reversed = reversed + original.charAt(i);
+            reversed = reversed + original.charAt(i);   // String concatenation
         }
 
-        // Compare original and reversed string
+        // Compare original and reversed using equals()
         if (original.equals(reversed)) {
-            System.out.println("The given string is a Palindrome.");
+            System.out.println("Result: The given string is a Palindrome.");
         } else {
-            System.out.println("The given string is NOT a Palindrome.");
+            System.out.println("Result: The given string is NOT a Palindrome.");
         }
 
-        // Close scanner
-        sc.close();
+        scanner.close();
     }
 }
